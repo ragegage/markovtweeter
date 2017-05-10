@@ -50,7 +50,7 @@ class MarkovHash
     MarkovHash.new(words)
   end
 
-  def self.hash_from_array(words)
+  def self.hash_from_array(training)
     words = Hash.new { [] }
 
     # takes list of strings, creates hash of their following values
@@ -71,6 +71,8 @@ class MarkovHash
       end
       words[current_word] = prob_list
     end
+
+    words
   end
 
   def access(input)
