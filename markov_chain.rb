@@ -1,11 +1,12 @@
 require 'twitter'
+require 'byebug'
 
 # f = File.readlines('florida_man1.txt')
 # f2 = f.map {|w| w.gsub("---", "") }
 # f2.map! {|w| w.gsub("\n", "") }
 # mh = MarkovHash.parse f2
 
-# class to handle accessing values with probabilities attached
+# ruby library to connect to Twitter's API
 $client = Twitter::REST::Client.new do |config|
   config.consumer_key        = ENV["CONSUMER_KEY"]
   config.consumer_secret     = ENV["CONSUMER_SECRET"]
@@ -32,6 +33,7 @@ def $client.get_all_tweets(user)
   end
 end
 
+# class to handle accessing values with probabilities attached
 class MarkovHash
   def initialize(probability_hash)
     @hash = probability_hash
