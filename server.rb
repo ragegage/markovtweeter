@@ -1,6 +1,5 @@
 require 'sinatra'
 require 'json'
-require 'byebug'
 
 require_relative './markov_chain'
 

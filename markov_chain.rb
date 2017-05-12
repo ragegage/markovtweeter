@@ -1,5 +1,4 @@
 require 'twitter'
-require 'byebug'
 
 # ruby library to connect to Twitter's API
 $client = Twitter::REST::Client.new do |config|
