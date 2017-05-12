@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   usernameForm.addEventListener("submit", (e) => {
     e.preventDefault()
-    fetch(`http://localhost:4567/lookup/${usernameInput.value}`)
+    fetch(`https://markovtweeter.herokuapp.com/lookup/${usernameInput.value}`)
       .then((res) => {
         username = usernameInput.value
         usernameInput.value = ""
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   generateTweetButton.addEventListener("click", (e) => {
     e.preventDefault()
-    fetch(`http://localhost:4567/lookup/${username}/search`)
+    fetch(`https://markovtweeter.herokuapp.com/lookup/${username}/search`)
       .then(res => res.json() )
       .then(res => {
         tweetList.innerHTML = `<li>${res.message}</li>` + tweetList.innerHTML
