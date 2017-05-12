@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background-position: fixed;
+    background: url(https://images.unsplash.com/photo-1491898156890-c422938e5304?dpr=1&auto=format&fit=crop&w=1080&h=720&q=80&cs=tinysrgb&crop=&bg=) no-repeat center center fixed;
+    background-size: cover;
+    font-family: Helvetica Neue, Helvetica, sans-serif;
+}
+
+form#form {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1#now-tweeting-as {
+    text-align: center;
+}
+
+ul#tweets {
+    width: 40%;
+    margin: 0;
+    padding: 20px;
+}
+
+button#generate {
+    margin-left: calc(20vw - 40px);
+}
+
+button#generate, #submit {
+    padding: 8px;
+    border-radius: 5px;
+    background-color: white;
+    border: 1px solid #999;
+}
+
+li {
+    list-style: none;
+    padding: 10px;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+input#username {
+    padding: 7px;
+}
