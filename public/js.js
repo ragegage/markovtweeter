@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
 
     tweetingAs.innerText = `creating a markov chain from
-    @${usernameInput.value}'s twitter history'`
+    @${usernameInput.value}'s twitter history`
     generateTweetButton.disabled = true
   })
 
