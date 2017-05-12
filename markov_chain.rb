@@ -80,7 +80,7 @@ class MarkovHash
     access(input)
   end
 
-  def string
+  def tweet
     words = []
     until words.length > 0 && words.last == nil
       words << self[words.last]

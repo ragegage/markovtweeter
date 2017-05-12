@@ -18,6 +18,6 @@ get '/lookup/:username' do
 end
 
 get '/lookup/:username/search' do
-  {message: mh[params[:username]].string}.to_json
+  {message: mh[params[:username]].tweet}.to_json
   # call #string on mh[params[:username]]
 end
