@@ -11,13 +11,12 @@ get '/' do
 end
 
 get '/lookup/:username' do
-  # mh[params[:username]] = "new tweet from #{params[:username]}"
-  mh[params[:username]] = MarkovHash.from_twitter(params[:username])
-  # create new MarkovHash
+  unless mh[params[:username]]
+    mh[params[:username]] = MarkovHash.from_twitter(params[:username])
+  end
   {message: "got it"}.to_json
 end
 
 get '/lookup/:username/search' do
   {message: mh[params[:username]].string}.to_json
-  # call #string on mh[params[:username]]
 end
